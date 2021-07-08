@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //fetching the average of reviews
 
-app.get("/overview/reviews/:product_id", (req, res) => {
+app.get("/api/overview/reviews/:product_id", (req, res) => {
   axios
     .get(`https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/reviews/`, {
       headers: {
@@ -40,7 +40,7 @@ app.get("/overview/reviews/:product_id", (req, res) => {
 
 //fetching product details
 
-app.get("/overview/products/:product_id", (req, res) => {
+app.get("/api/overview/products/:product_id", (req, res) => {
   axios
     .get(
       `https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/products/${req.params.product_id}`,
@@ -60,7 +60,7 @@ app.get("/overview/products/:product_id", (req, res) => {
 
 //fetching product images and thumbnails
 
-app.get(`/overview/products/:product_id/styles/`, (req, res) => {
+app.get(`/api/overview/products/:product_id/styles/`, (req, res) => {
   axios
     .get(
       `https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc/products/${req.params.product_id}/styles`,
@@ -90,7 +90,7 @@ app.get(`/overview/products/:product_id/styles/`, (req, res) => {
 
 //posting to the cart
 
-app.post(`/overview/cart`, (req, res) => {
+app.post(`/api/overview/cart`, (req, res) => {
   console.log(req.body);
   axios
     .post(

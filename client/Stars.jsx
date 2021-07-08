@@ -9,7 +9,7 @@ function Stars(props) {
   const urlApi = "https://app-hrsei-api.herokuapp.com/api/fec2/hrnyc";
 
   useEffect(() => {
-    axios.get(`/overview/reviews/${props.id}`).then((data) => {
+    axios.get(`/api/overview/reviews/${props.id}`).then((data) => {
       setStars(data.data).catch((err) => {
         console.log(err, "failed to get data");
       });

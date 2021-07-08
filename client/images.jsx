@@ -21,7 +21,7 @@ const Images = (props) => {
 
   useEffect(() => {
     axios
-      .get(`/overview/products/${props.id}`)
+      .get(`/api/overview/products/${props.id}`)
       .then((response) => {
         setCategory(response.data.category);
         setName(response.data.name);
@@ -34,7 +34,7 @@ const Images = (props) => {
   }, []);
 
   useEffect(() => {
-    axios.get(`/overview/products/${props.id}/styles`).then((response) => {
+    axios.get(`/api/overview/products/${props.id}/styles`).then((response) => {
       // console.log(response.data);
       setMain(response.data[index].main);
       setImages(response.data);
@@ -75,7 +75,7 @@ const Images = (props) => {
 
   const addToBag = () => {
     axios
-      .post(`/overview/cart`, {
+      .post(`/api/overview/cart`, {
         sku_id: skus,
         count: quantity,
       })
