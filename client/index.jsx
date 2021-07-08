@@ -4,7 +4,7 @@ import Stars from "./Stars.jsx";
 import Description from "./Description.jsx";
 import Images from "./images.jsx";
 const App = (props) => {
-  const [id, setId] = useState(11050);
+  const [id, setId] = useState(11005);
 
   return (
     <div className="flex gap-6 bg-gray-200">
