@@ -230,7 +230,7 @@ const Images = (props) => {
                     // onClick={() => changeSize}
                     key={taille[0]}
                     // value={taille[1].size.value}
-                    value={i}
+                    value={taille[1].size}
                   >
                     {taille[1].size}
                   </option>
