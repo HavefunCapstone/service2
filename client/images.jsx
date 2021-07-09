@@ -218,6 +218,7 @@ const Images = (props) => {
           })}
         </ul>
         <div className="gap-y-6 gap-x-6">
+          <div className="px-6 py-6">
           {Object.entries(size).length && (
             <select
               className="gap-6 z-10 mt-1 w-16 bg-white shadow-lg h-8 max-h-16 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
@@ -238,6 +239,7 @@ const Images = (props) => {
               })}
             </select>
           )}
+          </div>
           {quantity && (
             <select
               className="absolute z-10 mt-1 w-16 bg-white shadow-lg h-8 max-h-16 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow focus:outline-none sm:text-sm"
@@ -273,26 +275,14 @@ const Images = (props) => {
             />
           </svg>
         </h3> */}
+        <div className="gap-6">
         <button
           onClick={addToBag}
           className="transition ease-in duration-300 inline-flex items-center text-sm font-medium mb-2 md:mb-0 bg-purple-500 px-5 py-2 hover:shadow-lg tracking-wider text-white rounded-full hover:bg-purple-600 "
         >
           <span>Add Cart</span>
         </button>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6 border-6"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={1}
-            d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
-          />
-        </svg>
+        </div>
       </div>
     </>
   );
