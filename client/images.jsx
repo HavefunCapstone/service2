@@ -218,7 +218,6 @@ const Images = (props) => {
           })}
         </ul>
         <div className="gap-y-6 gap-x-6">
-          <div className="px-6 py-6">
           {Object.entries(size).length && (
             <select
               className="gap-6 z-10 mt-1 w-16 bg-white shadow-lg h-8 max-h-16 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow-auto focus:outline-none sm:text-sm"
@@ -239,7 +238,7 @@ const Images = (props) => {
               })}
             </select>
           )}
-          </div>
+          <div className="px-4">
           {quantity && (
             <select
               className="absolute z-10 mt-1 w-16 bg-white shadow-lg h-8 max-h-16 rounded-md py-1 text-base ring-1 ring-black ring-opacity-5 overflow focus:outline-none sm:text-sm"
@@ -255,6 +254,7 @@ const Images = (props) => {
               })}
             </select>
           )}
+          </div>
         </div>
         {/* <h3 className="border border-indigo-600 w-36">
           {" "}
